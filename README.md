@@ -1,2 +1,4 @@
 # TKB
-Tekken 7 Bot
+Tekken 7 is a fighting game released in 2017 and has over 40 characters. Each character has 4 limb buttons (left/right punch, left/right kick) and each button can be combined with another button to create another input. Each input can be combined together to create a combo. There are different notations and properties (such as frames, damage, recovery duration) for the combos and those can be hard to find in game. In fact, the frame display tool is offered as a paid DLC in the game. 
+
+This project aims to help players by quickly finding the information they need, when they need it. The visualizer will display properties for each input and will help convert the text notation to a button display so that players know which buttons are needed to perform a combo. The bot will be used to deliver the same information, however, it will be used mainly on Reddit and Discord.
