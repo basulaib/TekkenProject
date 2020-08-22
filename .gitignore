@@ -1,0 +1,13 @@
+*.so
+
+*.egg
+*.egg-info
+lib
+lib64
+__pycache__
+
+*.env
+.flaskenv
+pyvenv.cfg
+.vscode
+
