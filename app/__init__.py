@@ -4,9 +4,9 @@ from flask_migrate import Migrate
 from flask_bootstrap import Bootstrap
 from flask_moment import Moment
 from config import Config
+from logging.handlers import SMTPHandler, RotatingFileHandler
 import logging
 import os
-from logging.handlers import SMTPHandler, RotatingFileHandler
 
 db = SQLAlchemy()
 migrate = Migrate()
