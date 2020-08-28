@@ -22,6 +22,9 @@ def create_app(config_class=Config):
     moment.init_app(app)
     bootstrap.init_app(app)
     
+    from app.main import bp as main_bp
+    app.register_blueprint(main_bp)
+    
     if not app.debug and not app.testing:
         if app.config['LOG_TO_STDOUT']:
             stream_handler = logging.StreamHandler()
