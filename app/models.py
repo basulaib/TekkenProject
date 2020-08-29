@@ -27,5 +27,15 @@ class CharacterMove(db.Model):
     notes = db.Column(db.String(64))
     
     def __repr__(self):
-        return 'Character: {}\n Move: {}\n Command: {}\n Hit Level: {}\n Damage: {}\n Start Frame: {}\n Block Frame: {}\n Hit Frame: {}\n CH Frame: {}\n Notes: {}'.format(self.character,self.move_id,self.command,self.hit_level,self.damage,self.start_frame,self.block_frame,self.hit_frame,self.counter_hit_frame,self.notes)
-    
+        return (
+            f"Character: {self.character}\n"
+            f"Move ID: {self.move_id}\n"
+            f"Command: {self.command}\n"
+            f"Hit level: {self.hit_level}\n"
+            f"Damage: {self.damage}\n"
+            f"Start frame: {self.start_frame}\n"
+            f"Block frame: {self.block_frame}\n"
+            f"Hit frame: {self.hit_frame}\n"
+            f"Counter hit frame: {self.counter_hit_frame}\n"
+            f"Notes: {self.notes}"
+        )

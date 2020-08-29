@@ -23,3 +23,33 @@
 2020-08-27 19:36:12,596 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:42]
 2020-08-27 19:36:52,275 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:42]
 2020-08-27 21:15:19,400 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:42]
+2020-08-28 05:13:36,451 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:42]
+2020-08-28 05:13:50,254 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:42]
+2020-08-28 05:19:12,313 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:42]
+2020-08-28 05:20:12,974 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:42]
+2020-08-28 18:42:38,919 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:42]
+2020-08-28 19:43:26,380 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:42]
+2020-08-28 19:46:38,286 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:42]
+2020-08-28 19:47:35,828 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:42]
+2020-08-28 19:56:29,191 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:42]
+2020-08-28 23:07:00,866 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:42]
+2020-08-28 23:07:05,265 ERROR: Exception on / [GET] [in c:\users\abu\desktop\git\tkb\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "c:\users\abu\desktop\git\tkb\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\abu\desktop\git\tkb\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\abu\desktop\git\tkb\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\abu\desktop\git\tkb\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\abu\desktop\git\tkb\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\abu\desktop\git\tkb\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Abu\Desktop\git\TKB\app\main\routes.py", line 12, in index
+    table = MoveTable(moves)
+NameError: name 'MoveTable' is not defined
+2020-08-28 23:07:50,441 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:42]
+2020-08-28 23:49:53,219 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:42]
+2020-08-29 02:51:02,646 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:42]

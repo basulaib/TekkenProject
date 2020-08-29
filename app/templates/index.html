@@ -1,5 +1,10 @@
 {% extends "base.html" %}
 
 {% block app_content %}
-    <p>The time now is {{time}}</p>
+    {% if table %}
+    <p>Table:</p>
+    {{ table }}
+    {% else %}
+    <p>The time is {{ time }}</p>
+    {% endif %}
 {% endblock %}
