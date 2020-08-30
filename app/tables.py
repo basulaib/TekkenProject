@@ -1,11 +1,15 @@
 from flask_table import Table, Col
 
 class CharacterTable(Table):
-    char_id = Col('Character ID', show=False)
+    table_id = 'table_id'
+    classes = ['display']
+    char_id = Col('Character ID')
     name = Col('Character name')
-    moves = Col('Character moves')
+    moves = Col('Character moves', show=False)
 
 class MoveTable(Table):
+    table_id = 'table_id'
+    classes = ['display']
     move_id = Col('Move ID', show=False)
     character = Col('Character', show=False)
     command = Col('Command')

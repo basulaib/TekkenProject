@@ -1,3 +1,5 @@
 from flask import Blueprint
 
-bp = Blueprint('character', __name__)
+bp = Blueprint('characters', __name__)
+
+from app.characters import routes
