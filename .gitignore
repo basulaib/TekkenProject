@@ -13,4 +13,4 @@ pyvenv.cfg
 
 logs
 logs/
-*.log
+logs/*.log

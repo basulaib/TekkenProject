@@ -1,5 +1,6 @@
 from flask import render_template, flash, redirect, url_for, request, g, jsonify, current_app
 from app import db
+from app.main.routes import last_updated
 from app.models import Character, CharacterMove
 from app.characters import bp
 from app.tables import MoveTable, CharacterTable
@@ -9,8 +10,7 @@ from datetime import datetime
 def characters():
     chars = Character.query.all()
     table = CharacterTable(chars)
-    table.border = True
-    return render_template('characters.html', table=table)
+    return render_template('characters.html', table=table, last_updated=last_updated('app/static/js'))
 
 @bp.route('/characters/<character>')
 def char(character):
@@ -25,5 +25,4 @@ def char(character):
     c = Character.query.filter_by(name=character).first_or_404()
     moves = CharacterMove.query.filter_by(character=c.name).all()
     table = MoveTable(moves)
-    table.border = True
-    return render_template('characters.html', table=table)
+    return render_template('characters.html', table=table, last_updated=last_updated('app/static/js'))

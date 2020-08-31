@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
 
@@ -6,7 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Import the Datatables stylesheet -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='DataTables/datatables.min.css') }}">
+    <!--<link rel="stylesheet" href="{{ url_for('static', filename='DataTables/datatables.min.css') }}">-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='DataTables/Bootstrap-4-4.1.1/css/bootstrap.min.css') }}">
+    <!-- Import Bootstrap stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+
 
       {% if title %}
       <title>{{ title }}</title>
@@ -20,9 +25,14 @@
         {% block app_content %}{% endblock %}
 
         <!-- Import jquery 3.5.1 min -->
-      <script src="{{ url_for('static', filename='js/jquery-3.5.1.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/jquery-3.5.1.min.js') }}"></script>
+        <!-- Import Popper.js -->
+        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>-->
         <!-- Import Datatables script -->
-      <script src="{{ url_for('static', filename='DataTables/datatables.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='DataTables/datatables.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='DataTables/Bootstrap-4-4.1.1/js/bootstrap.min.js') }}"></script>
+        <!-- Import Bootstrap 4 min -->
+        <!--<script src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}"></script>-->
         <!-- Import custom script -->
-      <script src="{{ url_for('static', filename='js/tables.js') }}"></script>
+        <script type="text/javascript" src="/static/js/tables.js?u={{ last_updated }}"></script>
 </html>

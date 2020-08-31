@@ -1,7 +1,21 @@
 $(document).ready( function () {
-    $('#table_id').DataTable(
+    $('#t').DataTable(
         {
-            paging: false
+            dom: 'Bfrtip',
+            buttons: [
+                {
+                    extend: 'colvis',
+                    text: 'Column invis'
+                }
+            ],
+            colReorder: true,
+            paging: true,
+            scroller: true,
+            scrollY: 1000,
+            fixedHeader: true,
+            colReorder: {
+                realtime: false
+            }
         }
     );
 } );
