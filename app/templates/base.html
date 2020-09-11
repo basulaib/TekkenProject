@@ -1,38 +1,89 @@
 <!DOCTYPE html>
 <html>
-    <head>
+
+  <head>
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Abdullah Basulaib">
 
     <!-- Import the Datatables stylesheet -->
     <!--<link rel="stylesheet" href="{{ url_for('static', filename='DataTables/datatables.min.css') }}">-->
-    <link rel="stylesheet" href="{{ url_for('static', filename='DataTables/Bootstrap-4-4.1.1/css/bootstrap.min.css') }}">
+    <link rel="stylesheet"
+      href="{{ url_for('static', filename='DataTables/Bootstrap-4-4.1.1/css/bootstrap.min.css') }}">
+
     <!-- Import Bootstrap stylesheet -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+    <!--<link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">-->
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180"
+      href=" {{ url_for('static', filename='img/favicon/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32"
+      href=" {{ url_for('static', filename='img/favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16"
+      href=" {{ url_for('static', filename='img/favicon/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='img/favicon/site.webmanifest') }}">
 
 
-      {% if title %}
-      <title>{{ title }}</title>
-      {% else %}
-      <title>T7D</title>
-      {% endif %}
-    </head>
-    <body>
-        <div><a href="/index">Home</a></div>
-        <hr>
-        {% block app_content %}{% endblock %}
+    {% if title %}
+    <title>T7D - {{ title }}</title>
+    {% else %}
+    <title>T7D</title>
+    {% endif %}
+  </head>
 
-        <!-- Import jquery 3.5.1 min -->
-        <script src="{{ url_for('static', filename='js/jquery-3.5.1.min.js') }}"></script>
-        <!-- Import Popper.js -->
-        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>-->
-        <!-- Import Datatables script -->
-        <script src="{{ url_for('static', filename='DataTables/datatables.min.js') }}"></script>
-        <script src="{{ url_for('static', filename='DataTables/Bootstrap-4-4.1.1/js/bootstrap.min.js') }}"></script>
-        <!-- Import Bootstrap 4 min -->
-        <!--<script src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}"></script>-->
-        <!-- Import custom script -->
-        <script type="text/javascript" src="/static/js/tables.js?u={{ last_updated }}"></script>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsDefault"
+        aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collape navbar-collapse" id="navbarsDefault">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/"><img src="{{ url_for('static', filename='img/misc/logo.png') }}" </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="" target="_blank"><i class="fab fa-github fa-2x"></i>
+              <span class="nav-text">Github</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="" target="_blank"><i class="fab fa-linkedin fa-2x"></i> <span
+                class="nav-text">Linkedin</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href=""><i class="fas fa-envelope fa-2x"></i> <span class="nav-text">Email</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div><a href="/index">Home</a></div>
+    <hr>
+    {% block app_content %}
+    {% endblock %}
+
+
+
+    <!-- Import jquery 3.5.1 min -->
+    <script src="{{ url_for('static', filename='js/jquery-3.5.1.min.js') }}"></script>
+
+    <!-- Import Popper.js -->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>-->
+
+    <!-- Import Datatables script -->
+    <script src="{{ url_for('static', filename='DataTables/datatables.min.js') }}"></script>
+    <!--<script src="{{ url_for('static', filename='DataTables/Bootstrap-4-4.1.1/js/bootstrap.min.js') }}"></script>-->
+
+    <!-- Import Bootstrap 4 min -->
+    <!--<script src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}"></script>-->
+
+    <!-- Import custom script -->
+    <!--<script type="text/javascript" src="/static/js/tables.js?u={{ last_updated }}"></script>-->
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/f1ff57373a.js" crossorigin="anonymous"></script>
+
 </html>
