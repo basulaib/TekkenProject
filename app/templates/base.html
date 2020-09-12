@@ -11,20 +11,19 @@
 
     <!-- Import the Datatables stylesheet -->
     <!--<link rel="stylesheet" href="{{ url_for('static', filename='DataTables/datatables.min.css') }}">-->
-    <link rel="stylesheet"
-      href="{{ url_for('static', filename='DataTables/Bootstrap-4-4.1.1/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='DataTables/Bootstrap-4-4.1.1/css/bootstrap.min.css') }}">
 
     <!-- Import Bootstrap stylesheet -->
     <!--<link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">-->
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180"
-      href=" {{ url_for('static', filename='img/favicon/apple-touch-icon.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32"
-      href=" {{ url_for('static', filename='img/favicon/favicon-32x32.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16"
-      href=" {{ url_for('static', filename='img/favicon/favicon-16x16.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href=" {{ url_for('static', filename='img/favicon/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href=" {{ url_for('static', filename='img/favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href=" {{ url_for('static', filename='img/favicon/favicon-16x16.png') }}">
     <link rel="manifest" href="{{ url_for('static', filename='img/favicon/site.webmanifest') }}">
+
+    <!-- Font -->
+    <link rel="stylesheet" href=" {{ url_for('static', filename='fonts/fonts.css') }}">
 
 
     {% if title %}
@@ -36,28 +35,18 @@
 
   <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsDefault"
-        aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
+      <a href="/" class="navbar-brand">
+        <h1 style="font-family: 'franchiseregular';letter-spacing: 2px;color: white;">T7DI</h1>
+      </a>
       <div class="collape navbar-collapse" id="navbarsDefault">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="/"><img src="{{ url_for('static', filename='img/misc/logo.png') }}" </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="" target="_blank"><i class="fab fa-github fa-2x"></i>
-              <span class="nav-text">Github</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="" target="_blank"><i class="fab fa-linkedin fa-2x"></i> <span
-                class="nav-text">Linkedin</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href=""><i class="fas fa-envelope fa-2x"></i> <span class="nav-text">Email</span></a>
-          </li>
-        </ul>
+        <div class="navbar-nav">
+          <a href="/glossary" class="nav-link">Glossary</a>
+          <a href="/about/" class="nav-link">About</a>
+          <a href="/credit" class="nav-link">Credit</a>
+        </div>
       </div>
     </nav>
     <div><a href="/index">Home</a></div>
