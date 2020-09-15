@@ -1,24 +1,4 @@
-2020-08-30 23:38:04,312 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-08-30 23:50:35,375 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-08-30 23:51:11,103 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-08-30 23:51:35,972 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-08-30 23:52:41,203 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-08-30 23:57:23,659 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-08-31 00:01:06,879 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-08-31 00:02:47,090 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-08-31 00:09:41,531 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-08-31 00:36:15,929 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-08-31 01:02:13,884 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-08-31 01:07:14,807 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-08-31 01:12:45,755 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-08-31 01:13:16,879 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-08-31 01:13:50,060 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-08-31 01:14:41,761 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-01 19:48:03,633 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-10 22:55:37,141 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-10 23:54:35,660 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-11 02:04:30,117 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-11 02:04:33,899 ERROR: Exception on / [GET] [in c:\users\abu\desktop\git\tkb\lib\site-packages\flask\app.py:1892]
+2020-09-15 01:05:36,315 ERROR: Exception on / [GET] [in c:\users\abu\desktop\git\tkb\lib\site-packages\flask\app.py:1892]
 Traceback (most recent call last):
   File "c:\users\abu\desktop\git\tkb\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -32,8 +12,8 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "c:\users\abu\desktop\git\tkb\lib\site-packages\flask\app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\Abu\Desktop\git\TKB\app\main\routes.py", line 23, in index
-    return render_template('index.html', title='Test', table=table, last_updated=last_updated('app/static/js'))
+  File "C:\Users\Abu\Desktop\git\TKB\app\main\routes.py", line 20, in index
+    return render_template('index.html', title='Test')
   File "c:\users\abu\desktop\git\tkb\lib\site-packages\flask\templating.py", line 140, in render_template
     ctx.app,
   File "c:\users\abu\desktop\git\tkb\lib\site-packages\flask\templating.py", line 120, in _render
@@ -46,55 +26,80 @@ Traceback (most recent call last):
     raise value.with_traceback(tb)
   File "C:\Users\Abu\Desktop\git\TKB\app\templates\index.html", line 1, in top-level template code
     {% extends "base.html" %}
+  File "C:\Users\Abu\Desktop\git\TKB\app\templates\base.html", line 46, in top-level template code
+    {{ nav_link('index', 'Index') }}
+jinja2.exceptions.UndefinedError: 'nav_link' is undefined
+2020-09-15 01:07:09,311 ERROR: Exception on / [GET] [in c:\users\abu\desktop\git\tkb\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "c:\users\abu\desktop\git\tkb\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\abu\desktop\git\tkb\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\abu\desktop\git\tkb\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\abu\desktop\git\tkb\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\abu\desktop\git\tkb\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\abu\desktop\git\tkb\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Abu\Desktop\git\TKB\app\main\routes.py", line 20, in index
+    return render_template('index.html', title='Test')
+  File "c:\users\abu\desktop\git\tkb\lib\site-packages\flask\templating.py", line 140, in render_template
+    ctx.app,
+  File "c:\users\abu\desktop\git\tkb\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "c:\users\abu\desktop\git\tkb\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
   File "c:\users\abu\desktop\git\tkb\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
     reraise(*rewrite_traceback_stack(source=source))
   File "c:\users\abu\desktop\git\tkb\lib\site-packages\jinja2\_compat.py", line 28, in reraise
     raise value.with_traceback(tb)
-  File "C:\Users\Abu\Desktop\git\TKB\app\templates\base.html", line 24, in template
-    href=" {{ url_for('static', filename=img/favicon/favicon-32x32.png') }}">
-jinja2.exceptions.TemplateSyntaxError: expected token ',', got 'x32'
-2020-09-11 02:05:28,722 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-11 02:06:19,814 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-11 02:48:40,716 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-11 18:17:26,042 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-11 18:20:20,513 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-11 18:21:10,265 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-11 18:23:35,347 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-11 19:20:27,885 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-11 19:20:47,431 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-11 19:21:00,567 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-11 19:21:23,340 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-11 19:21:39,608 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-11 19:22:07,210 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-11 19:22:16,804 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-11 19:22:44,950 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-11 19:23:04,993 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-12 01:17:08,928 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-12 01:40:30,728 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-12 01:40:44,675 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-12 01:41:14,085 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-12 01:41:28,066 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-12 01:44:57,416 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-12 01:45:14,583 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-12 01:45:49,383 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-12 01:46:25,303 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-12 01:47:09,012 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-12 01:47:35,276 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-12 01:48:05,780 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-12 01:49:28,587 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-12 03:14:08,283 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-12 03:14:36,618 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-12 03:15:09,776 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-12 03:15:43,880 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-12 03:17:06,728 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-12 03:18:19,028 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-12 03:21:53,946 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-12 03:24:18,488 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-12 03:54:25,902 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-12 03:54:39,597 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-12 03:54:51,699 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-12 04:52:54,424 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-12 04:53:17,716 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-12 04:55:15,137 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-12 05:30:46,413 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-12 05:34:56,835 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
+  File "C:\Users\Abu\Desktop\git\TKB\app\templates\index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\Abu\Desktop\git\TKB\app\templates\base.html", line 46, in top-level template code
+    {{ nav_link('index', 'Index') }}
+jinja2.exceptions.UndefinedError: 'nav_link' is undefined
+2020-09-15 01:07:14,182 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
+2020-09-15 01:07:16,029 ERROR: Exception on / [GET] [in c:\users\abu\desktop\git\tkb\lib\site-packages\flask\app.py:1892]
+Traceback (most recent call last):
+  File "c:\users\abu\desktop\git\tkb\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\abu\desktop\git\tkb\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\abu\desktop\git\tkb\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\abu\desktop\git\tkb\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\abu\desktop\git\tkb\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\abu\desktop\git\tkb\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Abu\Desktop\git\TKB\app\main\routes.py", line 20, in index
+    return render_template('index.html', title='Test')
+  File "c:\users\abu\desktop\git\tkb\lib\site-packages\flask\templating.py", line 140, in render_template
+    ctx.app,
+  File "c:\users\abu\desktop\git\tkb\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "c:\users\abu\desktop\git\tkb\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "c:\users\abu\desktop\git\tkb\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "c:\users\abu\desktop\git\tkb\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\Abu\Desktop\git\TKB\app\templates\index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\Abu\Desktop\git\TKB\app\templates\base.html", line 46, in top-level template code
+    {{ nav_link('index', 'Index') }}
+jinja2.exceptions.UndefinedError: 'nav_link' is undefined
+2020-09-15 01:08:27,829 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
+2020-09-15 01:39:06,706 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
+2020-09-15 01:39:40,541 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
+2020-09-15 02:09:09,721 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
+2020-09-15 02:10:21,609 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
+2020-09-15 02:13:41,211 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
+2020-09-15 03:11:03,115 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
+2020-09-15 03:20:29,983 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
+2020-09-15 03:20:40,621 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
+2020-09-15 03:23:57,228 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
+2020-09-15 03:24:34,936 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]

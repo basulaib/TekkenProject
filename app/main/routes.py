@@ -17,7 +17,6 @@ def last_updated(folder):
 @bp.route('/', methods=['GET', 'POST'])
 @bp.route('/index/', methods=['GET', 'POST'])
 def index():
-    #moves = CharacterMove.query.filter_by(character='negan').all()
-    #table = MoveTable(moves)
-    #table.border = True
-    #return render_template('index.html', title='Test', table=table, last_updated=last_updated('app/static/js'))
+    chars = Character.query.all()
+    table = CharacterTable(chars)
+    return render_template('index.html', table=table, last_updated=last_updated('app/static/js'))

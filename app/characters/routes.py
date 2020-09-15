@@ -12,7 +12,7 @@ def characters():
     table = CharacterTable(chars)
     return render_template('characters.html', table=table, last_updated=last_updated('app/static/js'))
 
-@bp.route('/characters/<character>')
+@bp.route('/characters/<string:character>')
 def char(character):
     """Routing for individual character page.
 

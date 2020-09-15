@@ -9,6 +9,9 @@
     <meta name="description" content="">
     <meta name="author" content="Abdullah Basulaib">
 
+    <!-- Import base css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+
     <!-- Import the Datatables stylesheet -->
     <!--<link rel="stylesheet" href="{{ url_for('static', filename='DataTables/datatables.min.css') }}">-->
     <link rel="stylesheet" href="{{ url_for('static', filename='DataTables/Bootstrap-4-4.1.1/css/bootstrap.min.css') }}">
@@ -43,7 +46,7 @@
       </a>
       <div class="collape navbar-collapse" id="navbarsDefault">
         <div class="navbar-nav">
-          <a href="/glossary" class="nav-link">Glossary</a>
+          <a href="/characters" class="nav-link">Glossary</a>
           <a href="/about/" class="nav-link">About</a>
           <a href="/credit" class="nav-link">Credit</a>
         </div>
@@ -54,7 +57,11 @@
     {% block app_content %}
     {% endblock %}
 
-
+    <footer class="py-2 bg-dark text-white-50">
+      <div class="container text-center">
+        <small>Copyright &copy; T7ID</small>
+      </div>
+    </footer>
 
     <!-- Import jquery 3.5.1 min -->
     <script src="{{ url_for('static', filename='js/jquery-3.5.1.min.js') }}"></script>

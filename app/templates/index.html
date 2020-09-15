@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 
 {% block app_content %}
-    {% if table %}
-    <p>Table:</p>
-    {{ table }}
-    {% else %}
-    <p>The time is {{ time }}</p>
-    {% endif %}
+{% if table %}
+<p>Table:</p>
+{{ table }}
+{% else %}
+<p>Landing page!</p>
+{% endif %}
 {% endblock %}
