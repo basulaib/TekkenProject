@@ -69,3 +69,6 @@ Traceback (most recent call last):
   File "C:\Users\Abu\Desktop\git\TKB\app\templates\index.html", line 10, in template
     <img class="card-img-top" src="{{ url_for('static', filename={{ endstr }}) }}" alt="{{char.name}} banner">
 jinja2.exceptions.TemplateSyntaxError: expected token ':', got '}'
+2020-09-18 01:10:32,940 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
+2020-09-18 01:10:55,768 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
+2020-09-18 01:12:18,130 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
