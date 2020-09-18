@@ -8,9 +8,8 @@ from datetime import datetime
 
 @bp.route('/characters')
 def characters():
-    chars = Character.query.all()
-    table = CharacterTable(chars)
-    return render_template('characters.html', table=table, last_updated=last_updated('app/static/js'))
+    table = Character.query.all()
+    return render_template('index.html', table=table, last_updated=last_updated('app/static/js'))
 
 @bp.route('/characters/<string:character>')
 def char(character):

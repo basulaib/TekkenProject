@@ -1,4 +1,4 @@
-2020-09-15 01:05:36,315 ERROR: Exception on / [GET] [in c:\users\abu\desktop\git\tkb\lib\site-packages\flask\app.py:1892]
+2020-09-17 19:38:02,988 ERROR: Exception on /characters [GET] [in c:\users\abu\desktop\git\tkb\lib\site-packages\flask\app.py:1892]
 Traceback (most recent call last):
   File "c:\users\abu\desktop\git\tkb\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -12,24 +12,29 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "c:\users\abu\desktop\git\tkb\lib\site-packages\flask\app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\Abu\Desktop\git\TKB\app\main\routes.py", line 20, in index
-    return render_template('index.html', title='Test')
-  File "c:\users\abu\desktop\git\tkb\lib\site-packages\flask\templating.py", line 140, in render_template
-    ctx.app,
-  File "c:\users\abu\desktop\git\tkb\lib\site-packages\flask\templating.py", line 120, in _render
-    rv = template.render(context)
-  File "c:\users\abu\desktop\git\tkb\lib\site-packages\jinja2\environment.py", line 1090, in render
-    self.environment.handle_exception()
+  File "C:\Users\Abu\Desktop\git\TKB\app\characters\routes.py", line 12, in characters
+    return render_template('index.html', table=table, last_updated=last_updated('app/static/js'))
+  File "c:\users\abu\desktop\git\tkb\lib\site-packages\flask\templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "c:\users\abu\desktop\git\tkb\lib\site-packages\jinja2\environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "c:\users\abu\desktop\git\tkb\lib\site-packages\jinja2\environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "c:\users\abu\desktop\git\tkb\lib\site-packages\jinja2\environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "c:\users\abu\desktop\git\tkb\lib\site-packages\jinja2\loaders.py", line 127, in load
+    code = environment.compile(source, name, filename)
+  File "c:\users\abu\desktop\git\tkb\lib\site-packages\jinja2\environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
   File "c:\users\abu\desktop\git\tkb\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
     reraise(*rewrite_traceback_stack(source=source))
   File "c:\users\abu\desktop\git\tkb\lib\site-packages\jinja2\_compat.py", line 28, in reraise
     raise value.with_traceback(tb)
-  File "C:\Users\Abu\Desktop\git\TKB\app\templates\index.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "C:\Users\Abu\Desktop\git\TKB\app\templates\base.html", line 46, in top-level template code
-    {{ nav_link('index', 'Index') }}
-jinja2.exceptions.UndefinedError: 'nav_link' is undefined
-2020-09-15 01:07:09,311 ERROR: Exception on / [GET] [in c:\users\abu\desktop\git\tkb\lib\site-packages\flask\app.py:1892]
+  File "C:\Users\Abu\Desktop\git\TKB\app\templates\index.html", line 8, in template
+    <img class="card-img-top" src="{{ url_for('static', filename='img/chars/' + {{ char.name }} + '_thumbnail.png') }}" alt="{{char.name}} banner">
+jinja2.exceptions.TemplateSyntaxError: expected token ':', got '}'
+2020-09-17 19:41:25,957 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
+2020-09-17 19:41:27,049 ERROR: Exception on /characters [GET] [in c:\users\abu\desktop\git\tkb\lib\site-packages\flask\app.py:1892]
 Traceback (most recent call last):
   File "c:\users\abu\desktop\git\tkb\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -43,63 +48,24 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "c:\users\abu\desktop\git\tkb\lib\site-packages\flask\app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\Abu\Desktop\git\TKB\app\main\routes.py", line 20, in index
-    return render_template('index.html', title='Test')
-  File "c:\users\abu\desktop\git\tkb\lib\site-packages\flask\templating.py", line 140, in render_template
-    ctx.app,
-  File "c:\users\abu\desktop\git\tkb\lib\site-packages\flask\templating.py", line 120, in _render
-    rv = template.render(context)
-  File "c:\users\abu\desktop\git\tkb\lib\site-packages\jinja2\environment.py", line 1090, in render
-    self.environment.handle_exception()
+  File "C:\Users\Abu\Desktop\git\TKB\app\characters\routes.py", line 12, in characters
+    return render_template('index.html', table=table, last_updated=last_updated('app/static/js'))
+  File "c:\users\abu\desktop\git\tkb\lib\site-packages\flask\templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "c:\users\abu\desktop\git\tkb\lib\site-packages\jinja2\environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "c:\users\abu\desktop\git\tkb\lib\site-packages\jinja2\environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "c:\users\abu\desktop\git\tkb\lib\site-packages\jinja2\environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "c:\users\abu\desktop\git\tkb\lib\site-packages\jinja2\loaders.py", line 127, in load
+    code = environment.compile(source, name, filename)
+  File "c:\users\abu\desktop\git\tkb\lib\site-packages\jinja2\environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
   File "c:\users\abu\desktop\git\tkb\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
     reraise(*rewrite_traceback_stack(source=source))
   File "c:\users\abu\desktop\git\tkb\lib\site-packages\jinja2\_compat.py", line 28, in reraise
     raise value.with_traceback(tb)
-  File "C:\Users\Abu\Desktop\git\TKB\app\templates\index.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "C:\Users\Abu\Desktop\git\TKB\app\templates\base.html", line 46, in top-level template code
-    {{ nav_link('index', 'Index') }}
-jinja2.exceptions.UndefinedError: 'nav_link' is undefined
-2020-09-15 01:07:14,182 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-15 01:07:16,029 ERROR: Exception on / [GET] [in c:\users\abu\desktop\git\tkb\lib\site-packages\flask\app.py:1892]
-Traceback (most recent call last):
-  File "c:\users\abu\desktop\git\tkb\lib\site-packages\flask\app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\abu\desktop\git\tkb\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\abu\desktop\git\tkb\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\abu\desktop\git\tkb\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "c:\users\abu\desktop\git\tkb\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\abu\desktop\git\tkb\lib\site-packages\flask\app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\Abu\Desktop\git\TKB\app\main\routes.py", line 20, in index
-    return render_template('index.html', title='Test')
-  File "c:\users\abu\desktop\git\tkb\lib\site-packages\flask\templating.py", line 140, in render_template
-    ctx.app,
-  File "c:\users\abu\desktop\git\tkb\lib\site-packages\flask\templating.py", line 120, in _render
-    rv = template.render(context)
-  File "c:\users\abu\desktop\git\tkb\lib\site-packages\jinja2\environment.py", line 1090, in render
-    self.environment.handle_exception()
-  File "c:\users\abu\desktop\git\tkb\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
-    reraise(*rewrite_traceback_stack(source=source))
-  File "c:\users\abu\desktop\git\tkb\lib\site-packages\jinja2\_compat.py", line 28, in reraise
-    raise value.with_traceback(tb)
-  File "C:\Users\Abu\Desktop\git\TKB\app\templates\index.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "C:\Users\Abu\Desktop\git\TKB\app\templates\base.html", line 46, in top-level template code
-    {{ nav_link('index', 'Index') }}
-jinja2.exceptions.UndefinedError: 'nav_link' is undefined
-2020-09-15 01:08:27,829 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-15 01:39:06,706 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-15 01:39:40,541 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-15 02:09:09,721 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-15 02:10:21,609 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-15 02:13:41,211 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-15 03:11:03,115 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-15 03:20:29,983 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-15 03:20:40,621 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-15 03:23:57,228 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
-2020-09-15 03:24:34,936 INFO: T7D start [in C:\Users\Abu\Desktop\git\TKB\app\__init__.py:45]
+  File "C:\Users\Abu\Desktop\git\TKB\app\templates\index.html", line 10, in template
+    <img class="card-img-top" src="{{ url_for('static', filename={{ endstr }}) }}" alt="{{char.name}} banner">
+jinja2.exceptions.TemplateSyntaxError: expected token ':', got '}'

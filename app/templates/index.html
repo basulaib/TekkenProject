@@ -2,9 +2,19 @@
 
 {% block app_content %}
 {% if table %}
-<p>Table:</p>
-{{ table }}
+<div class="container">
+    {% for char in table %}
+    {% set endstr = '_thumbnail.png' %}
+    <div class="card" style="width:400px">
+        {% set endstr = 'img/chars/' + char.name + 'endstr' %}
+        <img class="card-img-top" src="{{ url_for('static', filename={{ endstr }}) }}" alt="{{char.name}} banner">
+        <div class="card-body">
+            <h4 class="card-title text-center">{{ char.name }}</h4>
+        </div>
+    </div>
+    {% endfor %}
+</div>
 {% else %}
-<p>Landing page!</p>
+<h4 class="display-4">Error</h4>
 {% endif %}
 {% endblock %}
