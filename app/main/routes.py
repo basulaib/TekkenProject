@@ -18,4 +18,4 @@ def last_updated(folder):
 @bp.route('/index/', methods=['GET', 'POST'])
 def index():
     chars = Character.query.all()
-    return render_template('index.html', table=table, last_updated=last_updated('app/static/js'))
+    return render_template('index.html', table=chars, last_updated=last_updated('app/static/js'))
