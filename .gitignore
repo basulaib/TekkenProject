@@ -12,3 +12,6 @@ pyvenv.cfg
 .vscode
 
 logs/
+app/static/bootstrap/
+app/static/DataTables/
+app/static/js/jquery-3.5.1.min.js
