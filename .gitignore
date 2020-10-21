@@ -11,6 +11,4 @@ __pycache__
 pyvenv.cfg
 .vscode
 
-logs
 logs/
-logs/*.log

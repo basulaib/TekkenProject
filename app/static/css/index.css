@@ -1,0 +1,35 @@
+body {
+    background-color: rgb(52, 58, 64);
+}
+
+.list-group {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.list-group-item {
+    background-color: rgb(52, 58, 64);
+    border: 10px;
+    border-color: black;
+    position: relative;
+    display: block;
+    padding: .75rem 1.25rem;
+    margin-bottom: -1px;
+    text-align: center;
+}
+
+.list-group-item img {
+    height: 100%;
+    width: 100%;
+}
+
+.list-group-item a {
+    color: whitesmoke;
+    text-decoration: underline;
+}
+
+/**style="overflow:auto;display:grid;align-items:center;grid-gap:1rem;grid-template-columns: repeat(3, 1fr);"
+
+style="position: relative;display: block;padding: .75rem 1.25rem;margin-bottom: -1px;"**/

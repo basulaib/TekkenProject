@@ -24,4 +24,4 @@ def char(character):
     c = Character.query.filter_by(name=character).first_or_404()
     moves = CharacterMove.query.filter_by(character=c.name).all()
     table = MoveTable(moves)
-    return render_template('characters.html', table=table, last_updated=last_updated('app/static/js'))
+    return render_template('characters.html', table=table, character=character, last_updated=last_updated('app/static/js'))
